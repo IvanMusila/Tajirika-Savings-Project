@@ -3,11 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        brand: {
-          DEFAULT: "#22c55e",
-          dark: "#15803d"
-        }
+      fontFamily: {
+        sans: ["system-ui", "ui-sans-serif", "sans-serif"]
       }
     }
   },

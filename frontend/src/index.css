@@ -6,8 +6,3 @@ body {
   @apply bg-slate-950 text-slate-50 antialiased;
 }
 
-input,
-button {
-  @apply outline-none;
-}
-

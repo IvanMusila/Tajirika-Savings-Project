@@ -1,0 +1,32 @@
+# --- Python / Flask ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+.env
+# Keep your local SQLite database out of GitHub
+*.db
+*.sqlite3
+
+# --- React / Vite / Node ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+# Vite env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- Operating System ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
