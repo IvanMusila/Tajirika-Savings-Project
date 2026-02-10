@@ -21,7 +21,7 @@ def create_app():
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     # Allow local frontend (e.g. Vite on port 5173) to talk to backend
-    CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+    CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173","https://tajirika-savings-project.onrender.com"}}, supports_credentials=True)
 
     db.init_app(app)
     Migrate(app, db)
