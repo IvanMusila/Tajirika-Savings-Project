@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Lock, Mail, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar.jsx"
 
 export default function Register({ onRegister }) {
   const [name, setName] = useState("");
@@ -36,6 +37,8 @@ export default function Register({ onRegister }) {
   };
 
   return (
+    <div>
+      {<Navbar />}
     <div className="mx-auto flex min-h-screen items-center justify-center px-4 py-10">
       <div className="w-full max-w-sm rounded-3xl border border-slate-700/70 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/70 backdrop-blur-2xl">
         <div className="mb-5 text-center">
@@ -46,7 +49,7 @@ export default function Register({ onRegister }) {
             Create an account
           </h1>
           <p className="mt-1 text-xs text-slate-400">
-            Set up your profile to start tracking your savings in KSh.
+            Set up your profile to start tracking your savings.
           </p>
         </div>
 
@@ -133,10 +136,11 @@ export default function Register({ onRegister }) {
           </button>
 
           <p className="text-xs text-center text-slate-400">
-            Already have an account? <Link to="/login" className="text-emerald-300 hover:underline">Log in</Link>
+            Already have an account? <Link to="/login" className="text-emerald-300 hover:underline text-sm">Log in</Link>
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 }

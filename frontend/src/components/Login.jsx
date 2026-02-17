@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Lock, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar.jsx"
 
 export default function Login({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -30,6 +31,8 @@ export default function Login({ onLogin }) {
   };
 
   return (
+    <div>
+      {<Navbar />}
     <div className="mx-auto flex min-h-screen items-center justify-center px-4 py-10">
       <div className="w-full max-w-sm rounded-3xl border border-slate-700/70 bg-slate-900/60 p-6 shadow-2xl shadow-slate-950/70 backdrop-blur-2xl">
         <div className="mb-5 text-center">
@@ -92,11 +95,12 @@ export default function Login({ onLogin }) {
           </button>
 
           <p className="text-xs text-center text-slate-400">
-            Don't have an account? <Link to="/register" className="text-emerald-300 hover:underline">Register</Link>
+            Don't have an account? <Link to="/register" className="text-emerald-300 hover:underline text-sm">Register</Link>
           </p>
 
         </form>
       </div>
+    </div>
     </div>
   );
 }

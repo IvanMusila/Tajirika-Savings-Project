@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import LandingPage from "./components/LandingPage.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Login from "./components/Login.jsx";
 import Register from "./components/Register.jsx";
+import Navbar from "./components/Navbar.jsx"
+
 
 const API_BASE_URL = "http://127.0.0.1:5000/api";
 
@@ -24,7 +27,7 @@ function App() {
 
     const data = await res.json();
     setUser(data.user);
-    navigate("/", { replace: true });
+    navigate("/dashboard", { replace: true });
   };
 
   const handleRegister = async ({ name, email, password }) => {
@@ -41,19 +44,21 @@ function App() {
 
     const data = await res.json();
     setUser(data.user);
-    navigate("/", { replace: true });
+    navigate("/dashboard", { replace: true });
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-slate-50">
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route
-          path="/"
+          path="/dashboard"
           element={user ? <Dashboard /> : <Navigate to="/login" replace />}
         />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
         <Route path="*" element={<Navigate to="/login" replace />} />
+        
       </Routes>
     </div>
   );
