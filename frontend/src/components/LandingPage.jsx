@@ -34,9 +34,9 @@ const LandingPage = () => {
               <Link to="/login" className="px-10 py-5 bg-[#10b981] text-[#020817] rounded-2xl font-bold hover:bg-[#059669] transition-all flex items-center justify-center gap-2 text-lg group shadow-[0_0_30px_rgba(16,185,129,0.2)]">
                 Get Started <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className="px-10 py-5 border border-slate-800 rounded-2xl font-bold hover:bg-white/5 transition-all text-lg">
+              {/* <button className="px-10 py-5 border border-slate-800 rounded-2xl font-bold hover:bg-white/5 transition-all text-lg">
                 How it works
-              </button>
+              </button> */}
             </div>
           </div>
 
