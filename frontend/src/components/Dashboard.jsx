@@ -3,6 +3,7 @@ import GoalCard from "./GoalCard.jsx";
 import NewGoalModal from "./NewGoalModal.jsx";
 import DepositForm from "./DepositForm.jsx";
 import { useEffect, useMemo, useState } from "react";
+import Navbar from "./Navbar.jsx"
 
 const API_BASE_URL = "http://localhost:5000/api";
 
@@ -93,6 +94,8 @@ export default function Dashboard() {
   };
 
   return (
+    <div>
+      {<Navbar />}
     <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10">
       <header className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <div className="flex items-center gap-3">
@@ -124,7 +127,7 @@ export default function Dashboard() {
             Total saved
           </p>
           <p className="mt-3 text-3xl font-semibold text-emerald-300">
-            KSh {totalSavings.toFixed(2)}
+            KSh {totalSavings.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
         <div className="rounded-3xl border border-slate-700/70 bg-slate-900/40 p-4 text-xs text-slate-300 shadow-lg shadow-slate-950/60 backdrop-blur-xl sm:col-span-2">
@@ -132,7 +135,7 @@ export default function Dashboard() {
             Monthly obligations
           </p>
           <p className="mt-3 text-2xl font-semibold text-cyan-300">
-            KSh {monthlyObligations.toFixed(2)}/mo
+            KSh {monthlyObligations.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/mo
           </p>
           <p className="mt-2 text-[11px] text-slate-400">
             Sum of the monthly amount you need to save across all active goals to
@@ -182,6 +185,7 @@ export default function Dashboard() {
         onClose={() => setIsDepositOpen(false)}
         onDeposit={handleDeposit}
       />
+    </div>
     </div>
   );
 }

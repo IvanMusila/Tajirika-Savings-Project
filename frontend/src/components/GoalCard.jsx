@@ -52,7 +52,7 @@ export default function GoalCard({ goal, onDepositClick }) {
           <div className="text-right text-xs text-slate-400">
             <div>Target</div>
             <div className="font-semibold text-slate-100">
-              KSh {goal.target_amount.toFixed(2)}
+              KSh {goal.target_amount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function GoalCard({ goal, onDepositClick }) {
           <span>
             Remaining:{" "}
             <span className="font-semibold text-emerald-300">
-              KSh {remaining.toFixed(2)}
+              KSh {remaining.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
           </span>
           {goal.current_amount >= goal.target_amount && (
@@ -83,7 +83,7 @@ export default function GoalCard({ goal, onDepositClick }) {
                   : "bg-emerald-500/10 text-emerald-300 border border-emerald-500/30"
               }`}
             >
-              KSh {monthly.value.toFixed(2)}/mo
+              KSh {monthly.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/mo
             </span>
           </div>
         )}

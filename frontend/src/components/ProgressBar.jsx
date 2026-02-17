@@ -7,7 +7,7 @@ export default function ProgressBar({ current, target }) {
       <div className="flex justify-between text-xs text-slate-300">
         <span>{percentage}% saved</span>
         <span>
-          KSh {current.toFixed(2)} / KSh {target.toFixed(2)}
+          KSh {current.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} / KSh {target.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
         </span>
       </div>
       <div className="h-2.5 overflow-hidden rounded-full border border-slate-700/80 bg-slate-900/40 shadow-inner shadow-slate-950/70 backdrop-blur">

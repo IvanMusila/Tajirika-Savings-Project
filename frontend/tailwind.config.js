@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["system-ui", "ui-sans-serif", "sans-serif"]
+        sans: ["system-ui", "ui-sans-serif", "sans-serif"],
+        playfair: ['var(--font-playfair)', 'serif'],
       }
     }
   },

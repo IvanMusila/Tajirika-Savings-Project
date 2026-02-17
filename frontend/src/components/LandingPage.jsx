@@ -1,7 +1,7 @@
 import React from 'react';
 import { Plus, PiggyBank, Car, TrendingUp, ChevronRight, ShieldCheck, Smartphone, MousePointer2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-// import Dashboard from "./Dashboard.jsx";
+import Dashboard from "./Dashboard.jsx";
 import Navbar from "./Navbar.jsx" 
 
 const LandingPage = () => {
@@ -53,9 +53,7 @@ const LandingPage = () => {
                   <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-1">Preview Dashboard</p>
                   <h3 className="text-3xl font-bold text-white tracking-tight">KSh 1,240,000.00</h3>
                 </div>
-                <div className="p-3 bg-emerald-500/10 rounded-2xl text-emerald-400">
-                  {/* <Dashboard size={24} /> */}
-                </div>
+                
               </div>
 
               {/* Goal Card 1 */}
@@ -64,7 +62,7 @@ const LandingPage = () => {
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-400"><Car size={24} /></div>
                     <div>
-                      <h4 className="font-bold text-white">Subaru Forester</h4>
+                      <h4 className="font-bold text-white">Car</h4>
                       <p className="text-[10px] text-slate-500 font-mono">2026-08-01 DEADLINE</p>
                     </div>
                   </div>
